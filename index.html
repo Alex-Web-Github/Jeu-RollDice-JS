@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mon jeu en Javascript</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="section has-text-centered has-background-primary">
+      <div class="container">
+        <h1 class="title is-1 is-spaced">Voici un JEU en J.S. !</h1>
+        <h2 class="subtitle is-5">
+          Évaluation "Rendre un site dynamique en JavaScript"
+        </h2>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div
+          class="columns box has-text-centered is-multiline is-mobile bg-custom"
+        >
+          <div class="column is-one-third-mobile">
+            <div id="blockPlayer1" class="">
+              <div class="icon-text redTag1">
+                <span class="is-size-4">PLAYER 1</span>
+              </div>
+              <p
+                id="globalPlayer1"
+                class="is-size-2 has-text-danger has-text-weight-light"
+              >
+                XXXXX
+              </p>
+            </div>
+            <div class="block block-custom has-background-danger">
+              <p>CURRENT</p>
+              <p id="roundPlayer1" class="is-size-3 has-text-white">XX</p>
+            </div>
+          </div>
+
+          <div class="column is-one-third-mobile">
+            <div class="block">
+              <button class="button btnCustom" id="btnNewGame">
+                <span class="icon has-text-danger">
+                  <i class="bi bi-plus-circle"></i>
+                </span>
+                <span>NEW GAME</span>
+              </button>
+            </div>
+            <div class="dotBloc has-background-white-bis">
+              <div class="dotLine-1">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dotLine-2">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="dotLine-3">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+            <div class="block">
+              <button class="button btnCustom" id="btnRollDice">
+                <span class="icon has-text-danger">
+                  <i class="bi bi-arrow-repeat"></i>
+                </span>
+                <span>ROLL DICE</span>
+              </button>
+            </div>
+            <div class="block">
+              <button class="button btnCustom" id="btnHold">
+                <span class="icon has-text-danger">
+                  <i class="bi bi-box-arrow-in-down" width="32" height="32"></i>
+                </span>
+                <span>HOLD</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="column is-one-third-mobile">
+            <div id="blockPlayer1" class="">
+              <div class="icon-text redTag2">
+                <span class="is-size-4">PLAYER 2</span>
+              </div>
+              <p
+                id="globalPlayer2"
+                class="is-size-2 has-text-danger has-text-weight-light"
+              >
+                YYYYY
+              </p>
+            </div>
+            <div class="block block-custom has-background-danger">
+              <p>CURRENT</p>
+              <p id="roundPlayer2" class="is-size-3 has-text-white">YY</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer has-text-centered">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8-desktop is-offset-2-desktop">
+            <p>
+              <strong class="has-text-weight-semibold">
+                <a href="https://www.npmjs.com/package/bulma-start"
+                  >bulma-start@0.0.4</a
+                >
+              </strong>
+
+              <small>
+                Source code licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+              </small>
+            </p>
+
+            <p style="margin-top: 1rem">
+              <a href="http://bulma.io">
+                <img
+                  src="./images/bulma-start.png"
+                  alt="Made with Bulma"
+                  width="128"
+                  height="24"
+                />
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+  </body>
+</html>
