@@ -65,3 +65,23 @@ newGame.addEventListener("click", () => {
   roundPlayer2.innerText = `${round2}`;
   //console.log("global1:",`${global1}`,"global2:",`${global2}`,"round1:",`${round1}`,"round2 :",`${round2}`);
 });
+
+// Fonctionnalité du bouton "RollDice" : lancer le dé et afficher le résultat dans la variable 'round' du joueur concerné.
+const btnRollDice = document.getElementById("btnRollDice");
+btnRollDice.addEventListener("click", () => {
+  const roundPlayer1 = document.getElementById("roundPlayer1");
+  let result = rollDice();
+  console.log(result);
+  if (result === 1) {
+    roundPlayer1.innerText = "0";
+  } else {
+    round1 = result;
+    roundPlayer1.innerText = `${result}`;
+  }
+});
+
+// Fonctionnalité du bouton HOLD : ...
+const btnHold = document.querySelector("#btnHold");
+btnHold.addEventListener("click", () => {
+  console.log(`Click sur le bouton HOLD`);
+});
