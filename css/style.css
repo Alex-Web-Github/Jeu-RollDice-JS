@@ -1,6 +1,6 @@
-
-/******    Utilisation de la font-family LATO    *****/ 
-body, button {
+/******    Utilisation de la font-family LATO    *****/
+body,
+button {
     font-family: 'Lato', sans-serif;
 }
 
@@ -9,20 +9,16 @@ body, button {
     background: linear-gradient(90deg, hsla(0, 4%, 80%, 0.3) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 97%, 1) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 9%, 98%, 1) 50%);
 }
 
-/******    Customisation du bloc affichant le score en cours   ******/
+/***  Customisation du bloc affichant le score en cours ***/
 .block-custom {
     width: 120px;
     height: 80px;
     margin: 80px auto;
     padding-top: 5px;
 }
-/*#blockPlayer1 i {
-    opacity: 0;
-}
-*/
 
 
-/*********  DÉBUT : CSS du bloc DÉ   ********/
+/*** DÉBUT : CSS du bloc DÉ ***/
 .dotBloc {
     display: flex;
     flex-direction: column;
@@ -32,11 +28,13 @@ body, button {
     margin: 50px auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .dotLine-1,
 .dotLine-2,
 .dotLine-3 {
     margin: 5px 0;
 }
+
 .dot {
     display: inline-block;
     width: 10px;
@@ -45,10 +43,11 @@ body, button {
     background: red;
     margin: 0 6px
 }
+
 /*********  FIN : CSS du bloc DÉ   ********/
 
 /*********  Custom du CSS des boutons  ********/
 .btnCustom {
     border-style: none;
-    background-color: rgb(255, 255, 255,0);
+    background-color: rgb(255, 255, 255, 0);
 }
