@@ -17,15 +17,11 @@ function displayPlayer(p) {
   const player2 = document.querySelector(".redTag2");
 
   if (p === 1) {
-    let nvEl = document.createElement("span");
-    nvEl.innerHTML =
-      '<span class="icon bi bi-circle-fill is-size-6 has-text-danger"></span>';
-    player1.appendChild(nvEl);
+    player1.style.display = "inline-block";
+    player2.style.display = "none";
   } else {
-    let nvEl = document.createElement("span");
-    nvEl.innerHTML =
-      '<span class="icon bi bi-circle-fill is-size-6 has-text-danger"></span>';
-    player2.appendChild(nvEl);
+    player1.style.display = "none";
+    player2.style.display = "inline-block";
   }
 }
 

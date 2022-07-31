@@ -36,18 +36,21 @@
           class="columns box has-text-centered is-multiline is-mobile bg-custom"
         >
           <div class="column is-one-third-mobile">
-            <div>
-              <div class="icon-text redTag1">
-                <span class="is-size-4">PLAYER 1</span>
-              </div>
+            <div class="">
+              <p class="title is-5">
+                PLAYER 1
+                <span class="iconRedDot redTag1"></span>
+              </p>
+
               <p
                 id="globalPlayer1"
-                class="is-size-2 has-text-danger has-text-weight-light"
+                class="subtitle is-2 has-text-danger has-text-weight-light"
               >
                 0
               </p>
             </div>
-            <div class="block block-custom has-background-danger">
+
+            <div class="block-custom has-background-danger">
               <p>CURRENT</p>
               <p id="roundPlayer1" class="is-size-3 has-text-white">0</p>
             </div>
@@ -62,22 +65,16 @@
                 <span>NEW GAME</span>
               </button>
             </div>
-            <div class="dotBloc has-background-white-bis">
-              <div class="dotLine-1">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="dotLine-2">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-              <div class="dotLine-3">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
+            <div class="diceContainer">
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
+              <div class="dots"></div>
             </div>
             <div class="block">
               <button class="button btnCustom" id="btnRollDice">
@@ -98,13 +95,15 @@
           </div>
 
           <div class="column is-one-third-mobile">
-            <div>
-              <div class="icon-text redTag2">
-                <span class="is-size-4">PLAYER 2</span>
-              </div>
+            <div class="">
+              <p class="title is-5">
+                PLAYER 2
+                <span class="iconRedDot redTag2"></span>
+              </p>
+
               <p
                 id="globalPlayer2"
-                class="is-size-2 has-text-danger has-text-weight-light"
+                class="subtitle is-2 has-text-danger has-text-weight-light"
               >
                 0
               </p>
