@@ -29,8 +29,6 @@ function displayPlayer(p) {
 function rollDice() {
   let i = getRandomIntInclusive(1, 6);
   return i;
-
-  // Insérer ICI l'affichage des faces du Dé //
 }
 
 /////////////////////////////////////////////////////////////////
@@ -58,12 +56,62 @@ newGame.addEventListener("click", () => {
   player = firstPlayer;
 });
 
-// Fonctionnalité du bouton "RollDice" : lancer le dé et afficher le résultat dans le 'Current' du joueur concerné.
-const btnRollDice = document.getElementById("btnRollDice");
+// Fonctionnalité du bouton "RollDice"
+const btnRollDice = document.querySelector("#btnRollDice");
 btnRollDice.addEventListener("click", () => {
   let result = rollDice();
+  // Ci-dessous, vérification du bon déroulement du Script dans la console :
   console.log(`Lancé de Dé ${result}, joueur en cours: PLAYER ${player}`);
 
+  // Ci-après, Affichage des faces du Dé suivant le résultat du lancé :
+  const dots11 = document.querySelector(".dots11");
+  const dots13 = document.querySelector(".dots13");
+  const dots21 = document.querySelector(".dots21");
+  const dots22 = document.querySelector(".dots22");
+  const dots23 = document.querySelector(".dots23");
+  const dots31 = document.querySelector(".dots31");
+  const dots33 = document.querySelector(".dots33");
+
+  dots11.classList.remove("dots");
+  dots13.classList.remove("dots");
+  dots21.classList.remove("dots");
+  dots22.classList.remove("dots");
+  dots23.classList.remove("dots");
+  dots31.classList.remove("dots");
+  dots33.classList.remove("dots");
+
+  if (result === 1) {
+    dots22.classList.add("dots");
+  } else if (result === 2) {
+    dots11.classList.add("dots");
+    dots33.classList.add("dots");
+  } else if (result === 3) {
+    dots11.classList.add("dots");
+    dots22.classList.add("dots");
+    dots33.classList.add("dots");
+  } else if (result === 4) {
+    dots11.classList.add("dots");
+    dots13.classList.add("dots");
+    dots31.classList.add("dots");
+    dots33.classList.add("dots");
+  }
+  if (result === 5) {
+    dots11.classList.add("dots");
+    dots13.classList.add("dots");
+    dots22.classList.add("dots");
+    dots31.classList.add("dots");
+    dots33.classList.add("dots");
+  } else if (result === 6) {
+    dots11.classList.add("dots");
+    dots13.classList.add("dots");
+    dots21.classList.add("dots");
+    dots23.classList.add("dots");
+    dots31.classList.add("dots");
+    dots33.classList.add("dots");
+  }
+
+  // Affichage du résultat du lancer de Dé dans le "Current" du joueur concerné.
+  // En plus : si résultat Dé =1, alors changement de joueur
   if (player === 1) {
     if (result === 1) {
       round1 = 0;
@@ -93,7 +141,7 @@ btnHold.addEventListener("click", () => {
   console.log(`Click sur le bouton HOLD, joueur en cours: ${player}`);
   if (player === 1) {
     global1 = global1 + round1;
-    if (global1 >= 15) {
+    if (global1 >= 100) {
       alert(`Le GAGNANT est : PLAYER 1`);
     } else {
       globalPlayer1.innerText = global1;
@@ -104,7 +152,7 @@ btnHold.addEventListener("click", () => {
     }
   } else {
     global2 = global2 + round2;
-    if (global2 >= 15) {
+    if (global2 >= 100) {
       alert(`Le GAGNANT est : PLAYER 2`);
     } else {
       globalPlayer2.innerText = global2;

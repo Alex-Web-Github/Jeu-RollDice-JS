@@ -1,16 +1,16 @@
 /******    Utilisation de la font-family LATO    *****/
-body,
-button {
+body {
     font-family: 'Lato', sans-serif;
 }
 
 /******    Création du Background en 2 couleurs  *****/
 .bg-custom {
     background: linear-gradient(90deg, hsla(0, 4%, 80%, 0.3) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 97%, 1) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 9%, 98%, 1) 50%);
+    background-position: center;
 }
 
 /***  Customisation du bloc affichant le score en cours ***/
-.block-custom {
+.blockCurrent-custom {
     width: 120px;
     height: 80px;
     margin: 80px auto;
@@ -36,8 +36,8 @@ button {
     height: 70px;
     grid-template-rows: repeat(3, 20px);
     grid-template-columns: repeat(3, max-content);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin: 30px auto;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    margin: 0 auto;
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -52,6 +52,14 @@ button {
     margin: 0 6px;
 }
 
+.dotsBlank {
+    visibility: hidden;
+}
+
+.diceContainerMobile {
+    width: 90px;
+    height: 90px;
+}
 
 /*********  FIN : CSS du bloc DÉ   ********/
 
@@ -59,4 +67,32 @@ button {
 .btnCustom {
     border-style: none;
     background-color: rgb(255, 255, 255, 0);
+    font-family: 'lato', sans-serif;
 }
+
+.btnCustom:hover {
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+
+/*** Responsive 375<width<500px Les boutons s'affichent en dessous et en ligne 
+PROBLEME : Les boutons ne fonctionnenet pas dans ce cas ???  ***/
+
+/*@media screen and (max-width: 500px) {
+    #buttonsContainer {
+        display: none;
+    }
+
+    .blockCurrent-custom {
+        width: 120px;
+        height: 80px;
+        margin: 5px auto;
+    }
+
+}
+
+@media screen and (min-width: 501px) {
+    #mobileDisplay {
+        display: none;
+    }
+}
+*/
