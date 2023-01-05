@@ -1,4 +1,4 @@
 # Jeu-RollDice-JS
-Jeu de Dé en Javascript. 
+Jeu de Dé en Javascript, utilisation du FrameWork CSS "BULMA"
 Evaluation "Dynamiser son site en JS"
-FrameWork BULMA et BootStrap Icons
+Mon 1er code en JS
