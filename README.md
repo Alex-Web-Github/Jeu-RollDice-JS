@@ -1,4 +1,7 @@
 # Jeu-RollDice-JS
-Jeu de Dé en Javascript, utilisation du FrameWork CSS "BULMA"
-Evaluation "Dynamiser son site en JS"
-Mon 1er code en JS
+
+Jeu de Dé pour jouer dans le navigateur
+Utilisation du FrameWork CSS "BULMA"
+Mon 1er code en JS (évaluation d'entrainement)
+
+Démo jouable sur  :  alex-web-github.github.io/Jeu-RollDice-JS/

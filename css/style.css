@@ -74,25 +74,16 @@ body {
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-/*** Responsive 375<width<500px Les boutons s'affichent en dessous et en ligne 
-PROBLEME : Les boutons ne fonctionnenet pas dans ce cas ???  ***/
+/* Adaptation sur petits écrans -> mettre l'écran en format Paysage  */
 
-/*@media screen and (max-width: 500px) {
-    #buttonsContainer {
+@media screen and (orientation: landscape) and (max-width: 1023px) {
+    .hero-body {
+        padding: 0;
         display: none;
     }
 
-    .blockCurrent-custom {
-        width: 120px;
-        height: 80px;
-        margin: 5px auto;
-    }
-
-}
-
-@media screen and (min-width: 501px) {
-    #mobileDisplay {
+    .hero-head,
+    .hero-foot {
         display: none;
     }
 }
-*/
