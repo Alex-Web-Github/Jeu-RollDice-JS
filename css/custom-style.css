@@ -18,17 +18,14 @@ body {
 }
 
 .iconRedDot {
-    /*display: inline-block;*/
     background: red;
     height: 10px;
     width: 10px;
     border-radius: 5px;
     padding: auto;
-
 }
 
 /*** DÉBUT : CSS du bloc DÉ ***/
-
 .diceContainer {
     display: grid;
     background-color: rgb(250, 250, 250);
@@ -43,19 +40,18 @@ body {
     align-items: center;
 
 }
-
 .dots {
     width: 10px;
     height: 10px;
     border-radius: 10px;
-    background: red;
     margin: 0 6px;
 }
-
+.dots__red{
+    background: red;
+}
 .dotsBlank {
     visibility: hidden;
 }
-
 .diceContainerMobile {
     width: 90px;
     height: 90px;
@@ -75,7 +71,6 @@ body {
 }
 
 /* Adaptation sur petits écrans -> mettre l'écran en format Paysage  */
-
 @media screen and (orientation: landscape) and (max-width: 1023px) {
     .hero-body {
         padding: 0;

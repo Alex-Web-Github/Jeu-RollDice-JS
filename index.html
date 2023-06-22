@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/custom-style.css" />
   </head>
   <body>
     <section class="hero is-fullheight">
@@ -30,14 +30,13 @@
           </div>
         </header>
       </div>
-
       <div class="hero-body">
         <div class="container">
           <div
             class="columns is-vcentered has-text-centered is-mobile bg-custom"
           >
             <div class="column">
-              <div class="">
+              <div>
                 <p class="title is-5">
                   PLAYER 1
                   <span class="iconRedDot redTag1"></span>
@@ -50,16 +49,14 @@
                   0
                 </p>
               </div>
-
               <div class="blockCurrent-custom has-background-danger">
                 <p>CURRENT</p>
                 <p id="roundPlayer1" class="is-size-3 has-text-white">0</p>
               </div>
             </div>
-
             <div class="column" id="buttonsContainer">
               <div class="block">
-                <button class="button btnCustom" id="btnNewGame">
+                <button class="button btnCustom" onclick="startNewGame()">
                   <span class="icon has-text-danger">
                     <i class="bi bi-plus-circle"></i>
                   </span>
@@ -67,18 +64,18 @@
                 </button>
               </div>
               <div class="box diceContainer">
-                <div class="dots dots11"></div>
-                <div class="dots dotsBlank"></div>
-                <div class="dots dots13"></div>
-                <div class="dots dots21"></div>
-                <div class="dots22"></div>
-                <div class="dots dots23"></div>
-                <div class="dots dots31"></div>
-                <div class="dots dotsBlank"></div>
-                <div class="dots dots33"></div>
+                <div class="dots dots__red dots11"></div>
+                <div class="dots dots__red dotsBlank"></div>
+                <div class="dots dots__red dots13"></div>
+                <div class="dots dots__red dots21"></div>
+                <div class="dots dots22"></div>
+                <div class="dots dots__red dots23"></div>
+                <div class="dots dots__red dots31"></div>
+                <div class="dots dots__red dotsBlank"></div>
+                <div class="dots dots__red dots33"></div>
               </div>
               <div class="block">
-                <button class="button btnCustom" id="btnRollDice">
+                <button class="button btnCustom" onclick="getRollDice()" >
                   <span class="icon has-text-danger">
                     <i class="bi bi-arrow-repeat"></i>
                   </span>
@@ -86,7 +83,7 @@
                 </button>
               </div>
               <div class="block">
-                <button class="button btnCustom" id="btnHold">
+                <button class="button btnCustom" onclick="savePointsToGlobal()">
                   <span class="icon has-text-danger">
                     <i
                       class="bi bi-box-arrow-in-down"
@@ -105,7 +102,6 @@
                   PLAYER 2
                   <span class="iconRedDot redTag2"></span>
                 </p>
-
                 <p
                   id="globalPlayer2"
                   class="subtitle is-2 has-text-danger has-text-weight-light"
