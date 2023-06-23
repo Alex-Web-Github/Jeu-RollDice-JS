@@ -1,148 +1,126 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mon jeu en Javascript</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/custom-style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <section class="hero is-fullheight">
-      <div class="hero-head">
-        <header class="has-text-centered has-background-primary">
-          <div class="container" style="padding: 10px">
-            <h1 class="title is-size-1-tablet is-spaced">
-              Jeu de Dé : RollDice
-            </h1>
-            <h2 class="subtitle is-size-3-tablet">HTML/CSS/JavaScript</h2>
-          </div>
-        </header>
-      </div>
-      <div class="hero-body">
-        <div class="container">
-          <div
-            class="columns is-vcentered has-text-centered is-mobile bg-custom"
-          >
-            <div class="column">
-              <div>
-                <p class="title is-5">
-                  PLAYER 1
-                  <span class="iconRedDot redTag1"></span>
-                </p>
+        <div class="hero-head">
+            <header class="has-text-centered has-background-primary">
+                <div class="container" style="padding: 10px">
+                    <h1 class="title is-size-1-tablet is-spaced">
+                        Jeu de Dé : RollDice
+                    </h1>
+                    <h2 class="subtitle is-size-3-tablet">HTML/CSS/JavaScript</h2>
+                </div>
+            </header>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered has-text-centered is-mobile bg-custom">
+                    <div class="column">
+                        <div>
+                            <p class="title is-5">
+                                PLAYER 1
+                                <span class="iconRedDot redTag1"></span>
+                            </p>
 
-                <p
-                  id="globalPlayer1"
-                  class="subtitle is-2 has-text-danger has-text-weight-light"
-                >
-                  0
-                </p>
-              </div>
-              <div class="blockCurrent-custom has-background-danger">
-                <p>CURRENT</p>
-                <p id="roundPlayer1" class="is-size-3 has-text-white">0</p>
-              </div>
-            </div>
-            <div class="column" id="buttonsContainer">
-              <div class="block">
-                <button class="button btnCustom" onclick="startNewGame()">
-                  <span class="icon has-text-danger">
-                    <i class="bi bi-plus-circle"></i>
-                  </span>
-                  <span>NEW GAME</span>
-                </button>
-              </div>
-              <div class="box diceContainer">
-                <div class="dots dots__red dots11"></div>
-                <div class="dots dots__red dotsBlank"></div>
-                <div class="dots dots__red dots13"></div>
-                <div class="dots dots__red dots21"></div>
-                <div class="dots dots22"></div>
-                <div class="dots dots__red dots23"></div>
-                <div class="dots dots__red dots31"></div>
-                <div class="dots dots__red dotsBlank"></div>
-                <div class="dots dots__red dots33"></div>
-              </div>
-              <div class="block">
-                <button class="button btnCustom" onclick="getRollDice()" >
-                  <span class="icon has-text-danger">
-                    <i class="bi bi-arrow-repeat"></i>
-                  </span>
-                  <span>ROLL DICE</span>
-                </button>
-              </div>
-              <div class="block">
-                <button class="button btnCustom" onclick="savePointsToGlobal()">
-                  <span class="icon has-text-danger">
-                    <i
-                      class="bi bi-box-arrow-in-down"
-                      width="32"
-                      height="32"
-                    ></i>
-                  </span>
-                  <span>HOLD</span>
-                </button>
-              </div>
-            </div>
+                            <p id="globalPlayer1" class="subtitle is-2 has-text-danger has-text-weight-light">
+                                0
+                            </p>
+                        </div>
+                        <div class="blockCurrent-custom has-background-danger">
+                            <p>CURRENT</p>
+                            <p id="roundPlayer1" class="is-size-3 has-text-white">0</p>
+                        </div>
+                    </div>
+                    <div class="column" id="buttonsContainer">
+                        <div class="block">
+                            <button class="button btnCustom" onclick="startNewGame()">
+                                <span class="icon has-text-danger">
+                                    <i class="bi bi-plus-circle"></i>
+                                </span>
+                                <span>NEW GAME</span>
+                            </button>
+                        </div>
+                        <div class="box diceContainer">
+                            <div class="dots dots__red dots11"></div>
+                            <div class="dots dots__red dots__blank"></div>
+                            <div class="dots dots__red dots13"></div>
+                            <div class="dots dots__red dots21"></div>
+                            <div class="dots dots22"></div>
+                            <div class="dots dots__red dots23"></div>
+                            <div class="dots dots__red dots31"></div>
+                            <div class="dots dots__red dots__blank"></div>
+                            <div class="dots dots__red dots33"></div>
+                        </div>
+                        <div class="block">
+                            <button class="button btnCustom" onclick="getRollDice()">
+                                <span class="icon has-text-danger">
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </span>
+                                <span>ROLL DICE</span>
+                            </button>
+                        </div>
+                        <div class="block">
+                            <button class="button btnCustom" onclick="savePointsToGlobal()">
+                                <span class="icon has-text-danger">
+                                    <i class="bi bi-box-arrow-in-down" width="32" height="32"></i>
+                                </span>
+                                <span>HOLD</span>
+                            </button>
+                        </div>
+                    </div>
 
-            <div class="column">
-              <div class="">
-                <p class="title is-5">
-                  PLAYER 2
-                  <span class="iconRedDot redTag2"></span>
-                </p>
-                <p
-                  id="globalPlayer2"
-                  class="subtitle is-2 has-text-danger has-text-weight-light"
-                >
-                  0
-                </p>
-              </div>
-              <div class="blockCurrent-custom has-background-danger">
-                <p>CURRENT</p>
-                <p id="roundPlayer2" class="is-size-3 has-text-white">0</p>
-              </div>
-            </div>
-          </div>
+                    <div class="column">
+                        <div class="">
+                            <p class="title is-5">
+                                PLAYER 2
+                                <span class="iconRedDot redTag2"></span>
+                            </p>
+                            <p id="globalPlayer2" class="subtitle is-2 has-text-danger has-text-weight-light">
+                                0
+                            </p>
+                        </div>
+                        <div class="blockCurrent-custom has-background-danger">
+                            <p>CURRENT</p>
+                            <p id="roundPlayer2" class="is-size-3 has-text-white">0</p>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="hero-foot">
-        <footer class="has-text-centered">
-          <div class="container">
-            <div class="columns">
-              <div
-                class="column is-8-desktop is-offset-2-desktop"
-                style="padding-bottom: 0px"
-              >
-                <p>
-                  <strong class="has-text-weight-semibold">
-                    <a href="https://www.npmjs.com/package/bulma-start"
-                      >bulma-start@0.0.4</a
-                    >
-                  </strong>
-                  <small>
-                    Source code licensed
-                    <a href="http://opensource.org/licenses/mit-license.php"
-                      >MIT</a
-                    >
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
+                <div class="hero-foot">
+                    <footer class="has-text-centered">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column is-8-desktop is-offset-2-desktop" style="padding-bottom: 0px">
+                                    <p>
+                                        <strong class="has-text-weight-semibold">
+                                            <a href="https://www.npmjs.com/package/bulma-start">bulma-start@0.0.4</a>
+                                        </strong>
+                                        <small>
+                                            Source code licensed
+                                            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
     </section>
     <script type="text/javascript" src="./javascript/main.js"></script>
-  </body>
+</body>
+
 </html>

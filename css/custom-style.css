@@ -5,7 +5,11 @@ body {
 
 /******    Création du Background en 2 couleurs  *****/
 .bg-custom {
-    background: linear-gradient(90deg, hsla(0, 4%, 80%, 0.3) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 97%, 1) 50%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 9%, 98%, 1) 50%);
+    background: linear-gradient(90deg, hsla(0, 4%, 80%, 0.3) 50%,
+            hsla(0, 0%, 100%, 1) 50%,
+            hsla(0, 0%, 97%, 1) 50%,
+            hsla(0, 0%, 100%, 1) 50%,
+            hsla(0, 9%, 98%, 1) 50%);
     background-position: center;
 }
 
@@ -40,21 +44,20 @@ body {
     align-items: center;
 
 }
+
 .dots {
     width: 10px;
     height: 10px;
     border-radius: 10px;
     margin: 0 6px;
 }
-.dots__red{
+
+.dots__red {
     background: red;
 }
-.dotsBlank {
+
+.dots__blank {
     visibility: hidden;
-}
-.diceContainerMobile {
-    width: 90px;
-    height: 90px;
 }
 
 /*********  FIN : CSS du bloc DÉ   ********/
@@ -70,8 +73,7 @@ body {
     box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
-/* Adaptation sur petits écrans -> mettre l'écran en format Paysage  */
-@media screen and (orientation: landscape) and (max-width: 1023px) {
+@media only screen and (orientation: landscape) and (max-height: 428px) {
     .hero-body {
         padding: 0;
         display: none;
